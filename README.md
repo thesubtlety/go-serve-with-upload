@@ -1,0 +1,3 @@
+Super simple Go file server with upload and basic authentication.
+
+This is a pet project to play with go, use at your own risk...
