@@ -23,6 +23,10 @@ func main() {
 	flag.Parse()
 
 	if *userpass != "" {
+		if !strings.Contains(*userpass, ":") {
+			fmt.Println("Err: user pass format is user:pass")
+			usage()
+		}
 		log.Printf("Starting with authentication..")
 		user = strings.SplitN(*userpass, ":", 2)[0]
 		pass = strings.SplitN(*userpass, ":", 2)[1]
