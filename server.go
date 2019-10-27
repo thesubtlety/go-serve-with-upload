@@ -113,7 +113,7 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("\t%v:%v", k, v)
 	}
 
-	f, err := os.OpenFile(*dir + "/" + handler.Filename, os.O_WRONLY|os.O_CREATE, 0666)
+	f, err := os.OpenFile(*dir + "/" + filename, os.O_WRONLY|os.O_CREATE, 0660)
 	if err != nil {
 		log.Print(err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
