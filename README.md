@@ -2,7 +2,9 @@ Super simple Go file server with upload and basic authentication.
 
 This is a pet project to play with go, use at your own risk...
 
-Run `./gen-cert`
+1. `./gen-cert`
+2. `./build.sh server.go`
+3. `./build/server`
 
 ```
 Usage: ./server
