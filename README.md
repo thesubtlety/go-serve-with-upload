@@ -1,22 +1,18 @@
-Super simple Go file server with upload and basic authentication.
+Super simple Go file server with upload and basic authentication. And a hardcoded SSL cert.
 
-This is a pet project to play with go, use at your own risk...
-
-1. `./gen-cert`
-2. `./build.sh server.go`
-3. `./build/server`
+`./goserve`
 
 ```
-Usage: ./server
+Usage: ./server -h
   -d string
         directory to serve up (default ".")
   -h string
         interface to serve on (default "0.0.0.0")
   -k    don't use TLS
   -kc string
-        path to cert file (default "server.pem")
+        path to cert file
   -kf string
-        path to key file (default "server.key")
+        path to key file
   -p string
         port to serve on (default "8000")
   -u string
